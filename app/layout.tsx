@@ -5,6 +5,9 @@ import { Inter } from 'next/font/google';
 // Authentication
 import { ClerkProvider } from '@clerk/nextjs';
 
+// Providers
+import ToastProvider from '@/components/providers/toaster-provider';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -20,7 +23,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <ToastProvider />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
