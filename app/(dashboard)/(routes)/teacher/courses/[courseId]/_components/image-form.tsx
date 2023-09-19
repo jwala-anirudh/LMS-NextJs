@@ -76,9 +76,6 @@ const ImageForm = ({ initialData, courseId }: ImageFormProps) => {
               className="object-cover rounded-md"
               src={initialData.imageUrl}
             />
-            <div className="text-xs text-muted-foreground mt-4">
-              16:9 aspect ratio recommended
-            </div>
           </div>
         ))}
       {isEditing && (
@@ -91,6 +88,9 @@ const ImageForm = ({ initialData, courseId }: ImageFormProps) => {
               }
             }}
           />
+          <div className="text-xs text-muted-foreground mt-4">
+            16:9 aspect ratio recommended
+          </div>
         </div>
       )}
     </div>
