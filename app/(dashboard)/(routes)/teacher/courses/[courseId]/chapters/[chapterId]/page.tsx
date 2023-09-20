@@ -9,6 +9,7 @@ import { db } from '@/lib/db';
 // Components
 import { IconBadge } from '@/components/icon-badge';
 import ChapterTitleForm from './_components/chapter-title-form';
+import ChapterDescriptionForm from './_components/chapter-description-form';
 
 const ChapterIdPage = async ({
   params,
@@ -71,6 +72,11 @@ const ChapterIdPage = async ({
               <h2 className="text-xl">Customize your chapter</h2>
             </div>
             <ChapterTitleForm
+              initialData={chapter}
+              courseId={params.courseId}
+              chapterId={params.chapterId}
+            />
+            <ChapterDescriptionForm
               initialData={chapter}
               courseId={params.courseId}
               chapterId={params.chapterId}
