@@ -8,6 +8,7 @@ import { Preview } from '@/components/preview';
 import { Separator } from '@/components/ui/separator';
 import { VideoPlayer } from './_components/video-player';
 import { CourseEnrollButton } from './_components/course-enroll-button';
+import { CourseProgressButton } from './_components/course-progress-button';
 
 // DB & Actions
 import { getChapter } from '@/actions/get-chapter';
@@ -71,7 +72,12 @@ const ChapterIdPage = async ({
           <div className="p-4 flex flex-col md:flex-row items-center justify-between">
             <h2 className="text-2xl font-semibold mb-2">{chapter.title}</h2>
             {purchase ? (
-              <div>{/* TODO: add courseprogressbutton */}</div>
+              <CourseProgressButton
+                chapterId={params.chapterId}
+                courseId={params.courseId}
+                nextChapterId={nextChapter?.id}
+                isCompleted={!!userProgress?.isCompleted}
+              />
             ) : (
               <CourseEnrollButton
                 courseId={params.courseId}
