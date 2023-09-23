@@ -29,3 +29,11 @@ npx prisma db push
 ```
 npx prisma migrate reset
 ```
+
+### Stripe payment gateway
+
+After installing the cli, use the following command
+
+```
+stripe listen --forward-to localhost:3000/api/webhook
+```
