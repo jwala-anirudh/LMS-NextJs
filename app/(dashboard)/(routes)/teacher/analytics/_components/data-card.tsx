@@ -15,7 +15,7 @@ export const DataCard = ({ label, value, shouldFormat }: DataCardProps) => {
         <CardTitle className="text-sm font-medium">{label}</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="2-xl font-bold">
+        <div className="text-2xl font-bold">
           {shouldFormat ? formatPrice(value) : value}
         </div>
       </CardContent>
