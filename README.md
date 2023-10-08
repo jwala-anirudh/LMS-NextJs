@@ -1,10 +1,10 @@
-## Seed database with categories
-
-```
-node scripts/seed.ts
-```
-
 ## Prisma commands
+
+### Reset entire prisma db
+
+```
+npx prisma migrate reset
+```
 
 ### Local prisma studio
 
@@ -24,10 +24,10 @@ npx prisma generate
 npx prisma db push
 ```
 
-### Reset entire prisma db
+## Seed database with categories
 
 ```
-npx prisma migrate reset
+node scripts/seed.ts
 ```
 
 ### Stripe payment gateway
